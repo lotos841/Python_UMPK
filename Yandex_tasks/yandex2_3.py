@@ -182,28 +182,21 @@ print(new_num)
 #R Пока нэт решэнэй!
 
 
-#S пока не работает :(
-hidden_num = int(input())
+#S
+min_gues = 1
+max_gues = 1000
+mid_gues = (min_gues + max_gues) // 2
+print(mid_gues)
+answer = input()
 
-min = 0
-max = 1000
-predict = 500
-while True:
-    if predict == hidden_num:
-        print(predict)
-        break
-    elif hidden_num > predict:
-        print(predict)
-        print('Больше')
-        min = predict
-        predict = (max + min) // 2
-    elif hidden_num < predict:
-        print(predict)
-        print('Меньше')
-        max = predict
-        predict = (int(max + min + 1)) // 2
-print('Угадал!')
-
+while 'Угадал!' not in answer:
+    if 'Меньше' in answer:
+        max_gues = mid_gues - 1
+    elif 'Больше' in answer:
+        min_gues = mid_gues + 1
+    mid_gues = (min_gues + max_gues) // 2
+    print(mid_gues)
+    answer = input()
 
 
 #T
