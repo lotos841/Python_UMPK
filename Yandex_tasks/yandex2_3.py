@@ -179,7 +179,19 @@ for i in range(int(len(str(num)))):
 print(new_num)
 
 
-#R Пока нэт решэнэй!
+#R
+num = int(input())
+
+i = 2
+result = []
+while i * i <= num:
+    if num % i == 0:
+        num //= i
+        result.append(i)
+    else:
+        i += 1
+result.append(n)
+print(*result, sep=' * ')
 
 
 #S
