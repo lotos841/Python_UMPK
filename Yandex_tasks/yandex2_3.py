@@ -190,7 +190,7 @@ while i * i <= num:
         result.append(i)
     else:
         i += 1
-result.append(n)
+result.append(num)
 print(*result, sep=' * ')
 
 
